@@ -47,11 +47,13 @@ function createPlayer (playerClass, player) {
     $img.src = player.img;
     $character.appendChild($img);
  
-    
-
-    const $arenas = document.querySelector('.arenas');
-    $arenas.appendChild($player);
+    return $player;
 };
 
-createPlayer('player1', player1);
-createPlayer('player2', player2);
+const $arenas = document.querySelector('.arenas');
+
+const $player1 = createPlayer('player1', player1);
+const $player2 = createPlayer('player2', player2);
+
+$arenas.appendChild($player1);
+$arenas.appendChild($player2);
